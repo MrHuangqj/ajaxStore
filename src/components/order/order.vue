@@ -1,7 +1,7 @@
 <template>
 	<div id = "order">
 		<!-- 顶部红色区域 -->
-		<div class="head"></div>  
+		<div class="head"></div>
 		<!-- 中上部信息 -->
 		<div class="content">
 			<div class="content-top">
