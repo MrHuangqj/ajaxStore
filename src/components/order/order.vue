@@ -1,7 +1,7 @@
 <template>
 	<div id = "order">
 		<!-- 顶部红色区域 -->
-		<div class="head"></div>  
+		<div class="head"></div>
 		<!-- 中上部信息 -->
 		<div class="content">
 			<div class="content-top">
@@ -89,7 +89,7 @@
 		methods: {
 			getData() {
 				this.$http.get('/api/msg').then((res) => {
-					console.log(res.body.data.good)
+					console.log(res.body.data)
 				})
 			}
 		}
