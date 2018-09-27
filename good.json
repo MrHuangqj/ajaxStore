@@ -1,0 +1,24 @@
+{
+	"goodName":"小米8",
+	"price":1600,
+	"message":"商品详细的内容、、、",
+	"freight":10,
+	"sales":100,
+	"destination":"广州",
+	"bannerImgUrl":["../img/xxx.png","../img/xxx.png"],
+	"advertisementUrl":"../img/xx.png",
+	"product":[
+		{
+			"productName":"xx1",
+			"productImgUrl":"../img/xxx.png",
+			"description":"xxx1",
+			"productPrice":10
+		},
+		{
+			"productName":"xx2",
+			"productImgUrl":"../img/xxx.png",
+			"description":"xxx2",
+			"productPrice":10
+		}
+	]
+}
