@@ -20,8 +20,4 @@ export default {
     margin: 0;
     padding: 0;
   }
-  html,body{
-    width: 100%;
-    font-size: 10px;
-  }
 </style>

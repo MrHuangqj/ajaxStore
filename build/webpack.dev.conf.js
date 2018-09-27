@@ -11,8 +11,8 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 const express = require('express')
 const app = express()
-const appData = require('../book.json') // 加载本地json文件
-const msg = appData // 获取对应本地数据
+const appData = require('../data.json') // 加载本地json文件
+const msg = appData.seller // 获取对应本地数据
 const apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
