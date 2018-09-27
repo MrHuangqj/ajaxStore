@@ -18,22 +18,22 @@
 			</div>
 			<div class="content-foot">
 				<div class="content-foot-item">
-					<img class="bgimg" src="icon_1.svg">
+					<img class="bgimg" :src="icon1">
 					<p class="shr">收货人</p>
 					<p class="shr-message">xxx</p>
 				</div>
 				<div class="content-foot-item">
-					<img class="bgimg" src="icon_1.svg">
+					<img class="bgimg" :src="icon1">
 					<p class="shr">收货地址</p>
 					<p class="shr-message">xxx</p>
 				</div>
 				<div class="content-foot-item">
-					<img class="bgimg" src="icon_2.svg">
+					<img class="bgimg" :src="icon2">
 					<p class="shr">期望送达时间</p>
 					<p class="shr-message">xxx</p>
 				</div>
 				<div class="content-foot-item">
-					<img class="bgimg" src="icon_3.svg">
+					<img class="bgimg" :src="icon3">
 					<p class="shr">买家留言</p>
 					<p class="shr-message">xxx</p>
 				</div>
@@ -50,10 +50,6 @@
 				<p>xxx</p>
 			</div>
 			<div class="message-item">
-				<p>运费（快递）</p>
-				<p>xxx</p>
-			</div>
-			<div class="message-item">
 				<p>订单总价</p>
 				<p>xxx</p>
 			</div>
@@ -65,22 +61,30 @@
 		<!-- 联系商家、联系客服 -->
 		<div class="foot">
 			<div class="foot-left">
-				<img src="icon_4.svg">
-				<span>联系商家</span>
+				<img :src="icon4">
+				<p>联系商家</p>
 			</div>
 			<div class="foot-right">
-				<img src="icon_4.svg">
-				<span>联系客服</span>
+				<img :src="icon4">
+				<p>联系客服</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import icon1 from './icon_1.png'
+	import icon2 from './icon_2.png'
+	import icon3 from './icon_3.png'
+	import icon4 from './icon_4.png'
 	export default {
 		data() {
 			return {
-				msg: {}
+				msg: {},
+				icon1: icon1,
+				icon2: icon2,
+				icon3: icon3,
+				icon4: icon4
 			}
 		},
 		mounted() {
@@ -103,10 +107,16 @@
 	}
 	html,body{
 		width: 100%;
+		font-size: 10px;
+	}
+	img{
+		width: 2rem;
+		height: 2.5rem;
+		line-height: 2rem;
 	}
 	#order{
 		width: 100%;
-		font-size: 10px;
+		font-size: 1rem;
 		color: rgba(80, 80, 80, 1);
 		background: rgba(255, 255, 255, 1);
 	}
@@ -121,13 +131,11 @@
 	.content-top{
 		width: 85%;
 		height: 4rem;
-		font-size: 1.6rem;
 		padding: 1rem 0 1rem 0;
 	}
 	.content-top-item{
 		position: absolute;
 		height: 2rem;
-		width: 100%;
 		left: 10%;
 	}
 	.content-top p{
@@ -141,18 +149,15 @@
 	.content-middle span{
 		flex: 1;
 		text-align: center;
-		font-size: 1.4rem;
 	}
 	.content-foot{
 		width: 100%;
-		height: 14rem;
-		font-size: 1.4rem;
+		height: 12rem;
 	}
 	.content-foot-item{
-		margin-top: 1rem;
-		padding-left: 3.4rem;
+		padding-left: 2.5rem;
 		display: flex;
-		line-height: 2.5rem;
+		line-height: 3rem;
 	}
 	.bgimg{
 		flex: 1;
@@ -162,32 +167,29 @@
 		width: 5.7rem;
 	}
 	.shr-message{
-		flex: 7;
+		flex: 5;
 	}
 	.middle{
-		height: 8.5rem;
+		height: 5rem;
 		width: 100%;
 		text-align: center;
-		line-height: 8.5rem;
-		font-size: 1.4rem;
+		line-height: 5rem;
 	}
 	.message{
 		width: 100%;
-		height: 10rem;
+		height: 8rem;
 	}
 	.message-item{
-		width: 100%;
 		display: flex;
-		font-size: 1.4rem;
 		color: rgba(80, 80, 80, 1);
-		padding-left: 3.4rem;
+		padding-left: 2.5rem;
 		line-height: 2.5rem;
 	}
 	.message-item p:nth-of-type(1){
-		flex: 4;
+		flex: 5;
 	}
 	.message-item p:nth-of-type(2){
-		flex: 7;
+		flex: 5;
 	}
 	.foot{
 		width: 100%;
@@ -195,12 +197,37 @@
 		display: flex;
 		text-align: center;
 		line-height: 5rem;
-		font-size: 1.4rem;
 	}
 	.foot-left{
 		flex: 1;
+		width: 50%;
+		height: 5rem;
+		position: relative;
+	}
+	.foot-left img{
+		position: absolute;
+		left: 30%;
+		top: 30%;
+	}
+	.foot-left p{
+		position: absolute;
+		left: 50%;
+		top: 0%;
 	}
 	.foot-right{
 		flex: 1;
+		width: 50%;
+		height: 5rem;
+		position: relative;
+	}
+	.foot-right img{
+		position: absolute;
+		left: 30%;
+		top: 30%;
+	}
+	.foot-right p{
+		position: absolute;
+		left: 50%;
+		top: 0%;
 	}
 </style>
