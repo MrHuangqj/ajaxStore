@@ -1,0 +1,39 @@
+{
+  "product": [
+    {
+      "productName":"小米8青春版",
+      "imgUrl":["img/xiaomi/xiaomi8young.jpg","img/xiaomi/8青春版深空灰.jpg","img/xiaomi/xiaomi8gold_0.jpg","img/xiaomi/xiaomi8gold_1.jpg","img/xiaomi/xiaomi8gold_2.jpg"],
+      "description":"小米8青春版 镜面渐变 AI双摄 全面屏拍照游戏智能手机 6GB+64GB 全网通4G 双卡双待",
+      "price":"￥1699.00"
+    },
+    {
+      "productName":"小米8屏幕指纹版",
+      "imgUrl":["img/xiaomi/8指纹版_0.jpg","img/xiaomi/xiaomi8zhiwen.jpg","img/xiaomi/8指纹版_1.jpg","img/xiaomi/8指纹版3.jpg","img/xiaomi/8指纹版3.jpg"],
+      "description":"小米8屏幕指纹版 全面屏拍照游戏智能手机 8GB+128GB 全网通4G 双卡双待",
+      "price":"￥3599.00"
+    },
+    {
+      "productName":"小米8SE",
+      "imgUrl":["img/xiaomi/xiaomi8se.jpg","img/xiaomi/se_1.jpg","img/xiaomi/se_2.jpg","img/xiaomi/se_3.jpg","img/xiaomi/se_4.jpg"],
+      "description":"小米8SE 全面屏智能手机 6GB+64GB 全网通4G 双卡双待",
+      "price":"￥1899.00"
+    },
+    {
+      "productName":"小米8",
+      "imgUrl":["img/xiaomi/xiaomi8.jpg","img/xiaomi/8_1.jpg","img/xiaomi/8_2.jpg","img/xiaomi/8_3.jpg","img/xiaomi/8_4.jpg"],
+      "description":"小米8 全面屏游戏智能手机 6GB+64GB 全网通4G 双卡双待",
+      "price":"￥2599.00"
+    },
+    {
+      "productName":"小米MIX 2s",
+      "imgUrl":["img/xiaomi/xiaomimix2s.jpg","img/xiaomi/mix2s_1.jpg","img/xiaomi/mix2s_2.jpg","img/xiaomi/mix2s_3.jpg","img/xiaomi/mix2s_4.jpg"],
+      "description":"小米MIX2S 全面屏游戏手机 6GB+128GB 全网通4G 陶瓷手机",
+      "price":"￥2699.00"
+    },{
+      "productName":"iphone6",
+      "imgUrl":["img/iphone/iphone6.jpg","img/iphone/6_1.jpg","img/iphone/6_2.jpg","img/iphone/6_3.jpg","img/iphone/6_4.jpg"],
+      "description":"苹果（Apple）iPhone6 苹果6 全网通 移动联通电信4G智能手机",
+      "price":"￥1919.00"
+    }
+  ]
+}

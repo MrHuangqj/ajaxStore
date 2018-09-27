@@ -3,6 +3,7 @@
       <header>
         <img src="@/svg/图标 68.svg"/>
         <img src="@/svg/图标 69.svg"/>
+        <div></div>
         <div id="bar">
           <span>宝贝</span>
           <span>详情</span>
@@ -19,32 +20,30 @@
       </section>
       <section id="message">
         <div class="content">
-          <h2>价格：￥{{good.price}}</h2>
-          <div>{{good.message}}</div>
+          <h2>商品：￥{{good.productName}}</h2>
+          <div>{{good.description}}</div>
           <div>
-            <p>快递：免运费</p>
-            <p>月销售{{good.sales}}笔</p>
-            <p>发货地：{{good.destination}}</p>
+            <p>售价：{{good.price}}</p>
           </div>
         </div>
       </section>
       <div id="recommend">
         <h2>———推荐———</h2>
         <div id="goods">
-          <div class="good" v-for="item in good.product">
+          <div class="good" v-for="(item,index) in remmend">
             <img src="#"/>
-            <div>{{good.product[0].description}}</div>
-            <p>￥{{good.product[0].productPrice}}</p>
+            <div>{{remmend[index].description}}</div>
+            <p>{{remmend[index].price}}</p>
           </div>
         </div>
       </div>
       <div style="height: 5.86rem;width: 1px;"></div>
       <footer id="footbar">
         <div id="btn">
-          <div class="lbtn">
+          <div @click="add" class="lbtn">
             加入购物车
           </div>
-          <div class="rbtn">
+          <div @click="buy" class="rbtn">
             立即购买
           </div>
         </div>
@@ -143,7 +142,8 @@
     border-radius: 24rem;
     margin: 0.8rem;
   }
-
+  header > img{
+  }
   header > img:nth-child(1) {
     float: left;
   }
@@ -151,9 +151,20 @@
   header > img:nth-child(2) {
     float: right;
   }
+  header > div:nth-child(3){
+    background: white;
+    height: 2rem;
+    width: 2rem;
+    float: right;
+    position: absolute;
+    border-radius: 50%;
+    right: 0.5rem;
+  }
+
 
   #bar {
     height: 3.29rem;
+    width: 100%;
     line-height: 3.29rem;
     background: white;
     margin-top: 5.1rem;
@@ -268,44 +279,32 @@
 
 <script type="text/ecmascript-6">
   export default {
+    props:['num'],
     data() {
       return{
-        good: {
-          "goodName": "小米8",
-          "price": 1600,
-          "message": "商品详细的内容、、、",
-          "freight": 10,
-          "sales": 100,
-          "destination": "广州",
-          "bannerImgUrl": ["../img/xxx.png", "../img/xxx.png"],
-          "advertisementUrl": "../img/xx.png",
-          "product": [{
-            "productName": "xx1",
-            "productImgUrl": "../img/xxx.png",
-            "description": "商品描述商品描述商品描述商品描述商品描述商品描述商品描述商品描述",
-            "productPrice": 10
-          },
-            {
-              "productName": "xx2",
-              "productImgUrl": "../img/xxx.png",
-              "description": "xxx2",
-              "productPrice": 10
-            },
-            {
-              "productName": "xx1",
-              "productImgUrl": "../img/xxx.png",
-              "description": "商品描述商品描述商品描述商品描述商品描述商品描述商品描述商品描述",
-              "productPrice": 10
-            },
-            {
-              "productName": "xx1",
-              "productImgUrl": "../img/xxx.png",
-              "description": "商品描述商品描述商品描述商品描述商品描述商品描述商品描述商品描述",
-              "productPrice": 10
-            },
-          ]
-        }
+        good: {},
+        remmend:{}
       }
+    },
+    mounted() {
+      this.getData()
+    },
+    methods: {
+      getData() {
+        this.$http.get('/api/msg').then((res) => {
+          this.remmend=res.body.data.product
+          console.log(this.remmend)
+          sessionStorage.selected = '{"productName":"iphoneXS","imgUrl":["img/iphone/iphonexs.jpg","img/iphone/xs_1.jpg","img/iphone/xs_2.jpg","img/iphone/xs_3.jpg","img/iphone/xs_4.jpg"],"description":"Apple iPhone XS 64G 移动联通电信4G手机","price":"8699.00"}'
+          this.good = JSON.parse(sessionStorage.selected)
+          console.log(this.good)
+
+        })
+      },
+      buy(){},
+      add(){
+
+      }
+
     }
   }
 </script>
