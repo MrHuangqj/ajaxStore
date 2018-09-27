@@ -1,8 +1,8 @@
 <template>
     <div id="main">
       <header>
-        <img src="图标68.svg"/>
-        <img src="图标%2069.svg"/>
+        <img src="@/svg/图标 68.svg"/>
+        <img src="@/svg/图标 69.svg"/>
         <div id="bar">
           <span>宝贝</span>
           <span>详情</span>
@@ -267,7 +267,6 @@
 </style>
 
 <script type="text/ecmascript-6">
-
   export default {
     data() {
       return{
